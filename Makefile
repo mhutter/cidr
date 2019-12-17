@@ -1,0 +1,9 @@
+SOURCES := $(shell find . -name '*.go')
+
+test: $(SOURCES)
+	go test -v -race -cover ./...
+
+lint: $(SOURCES)
+	staticcheck ./...
+	golint -set_exit_status=1 ./...
+	misspell -error  $(SOURCES)

@@ -31,7 +31,7 @@ func calc(cidr string) (string, error) {
 		return "", err
 	}
 
-	bc := make(net.IP, 4, 4)
+	bc := make(net.IP, 4)
 	for i, b := range ipnet.Mask {
 		bc[i] = (0xff ^ b) + ipnet.IP[i]
 	}

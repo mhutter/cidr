@@ -1,0 +1,15 @@
+---
+name: Test
+on: push
+jobs:
+  go-lint-test:
+    name: Golang
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: shoukoo/golang-pipeline/go1.13/linter@master
+        with:
+          ERRCHECK: off
+          GOLINT: on
+          MISSPELL: on
+      - uses: shoukoo/golang-pipeline/go1.13/test@master
