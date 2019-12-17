@@ -1,0 +1,17 @@
+= cidr
+
+CLI tool to quickly calculate the net and broadcast IP of an IP in CIDR notation.
+
+== Usage
+
+    $ cidr 192.0.2.33/25
+    192.0.2.0 - 192.0.2.127
+
+== License
+
+MIT (see link:LICENSE[LICENSE])
+
+---
+> https://hutter.io/[Manuel Hutter] -
+> GitHub https://github.com/mhutter[@mhutter] -
+> Twitter https://twitter.com/dratir[@dratir]
